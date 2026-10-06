@@ -1,0 +1,347 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 18px 5%;
+    background: #080808;
+    border-bottom: 1px solid #333;
+}
+
+a {
+    color: #ddd;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.logo {
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    text-align: center;
+    padding: 65px 20px;
+    background: linear-gradient(#303030, #111);
+}
+
+header h1 {
+    font-family: Georgia, serif;
+    font-size: 48px;
+    letter-spacing: 4px;
+    color: white;
+    margin: 10px 0;
+}
+
+header p {
+    color: #ccc;
+}
+
+.botao,
+button {
+    display: inline-block;
+    background: #ddd;
+    color: #111;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 22px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.botao:hover,
+button:hover {
+    background: white;
+}
+
+main {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 25px;
+}
+
+section {
+    padding: 32px 0;
+    border-bottom: 1px solid #333;
+}
+
+h2 {
+    color: white;
+    font-size: 26px;
+    margin: 0 0 18px;
+    border-left: 3px solid #aaa;
+    padding-left: 12px;
+}
+
+h3 {
+    color: white;
+    font-size: 18px;
+}
+
+.sinopse {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.poster {
+    width: 280px;
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.card {
+    width: 240px;
+    background: #202020;
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.container-foto {
+    position: relative;
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+}
+
+.container-foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s;
+}
+
+.gif-autor {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.card:hover .foto-normal {
+    opacity: 0;
+}
+
+.card:hover .gif-autor {
+    opacity: 1;
+}
+
+.card h3 {
+    margin: 14px 15px 0;
+}
+
+.card p {
+    margin: 10px 15px 18px;
+}
+
+.card .personagem {
+    color: #bbb;
+    font-size: 14px;
+    margin: 2px 15px 10px;
+}
+
+main img {
+    filter: grayscale(100%);
+    transition: transform 0.3s;
+}
+
+main img:hover {
+    transform: scale(1.03);
+}
+
+.trailer {
+    max-width: 680px;
+    margin: auto;
+    text-align: center;
+    background: #202020;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.trailer img {
+    display: block;
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.trailer span {
+    display: block;
+    padding: 15px;
+}
+
+.trailer a:hover span {
+    text-decoration: underline;
+}
+
+.galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.irmaos {
+    display: block;
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    border-radius: 6px;
+}
+
+.cena {
+    flex: 1;
+    min-width: 240px;
+    background: #202020;
+    border: 1px solid #333;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.cena h3,
+.cena p {
+    margin: 12px 16px;
+}
+
+#curiosidades li {
+    margin-bottom: 12px;
+}
+
+form {
+    max-width: 600px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    background: #202020;
+    color: white;
+    border: 1px solid #666;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #aaa;
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid #ddd;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button {
+    margin-top: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #080808;
+    color: #bbb;
+    font-size: 14px;
+}
+
+.redes a {
+    display: inline-block;
+    border: 1px solid #555;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    line-height: 34px;
+    margin: 5px;
+}
+
+.redes a:hover {
+    background: #ddd;
+    color: #111;
+}
+
+.creditos {
+    font-size: 13px;
+}
+
+@media (max-width: 650px) {
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav ul {
+        justify-content: center;
+        gap: 12px;
+        font-size: 14px;
+    }
+
+    header {
+        padding: 45px 15px;
+    }
+
+    header h1 {
+        font-size: 32px;
+        letter-spacing: 1px;
+    }
+
+    main {
+        padding: 0 18px;
+    }
+
+    .sinopse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .card {
+        width: 100%;
+        max-width: 320px;
+    }
+}
